@@ -27,18 +27,20 @@ function onoffSwitch(target) {
   });
 }
 
-document.body.addEventListener("click", function(event) {
-  let target = event.target;
+if (document.body) {
+  document.body.addEventListener("click", function(event) {
+    let target = event.target;
 
-  while (target !== this) {
-    if (target.classList.contains("e-accordion")) {
-      toggleClickAccordion(target);
-      return;
+    while (target !== this) {
+      if (target.classList.contains("e-accordion")) {
+        toggleClickAccordion(target);
+        return;
+      }
+      if (target.classList.contains("onoffswitch")) {
+        onoffSwitch(target);
+        return;
+      }
+      target = target.parentNode;
     }
-    if (target.classList.contains("onoffswitch")) {
-      onoffSwitch(target);
-      return;
-    }
-    target = target.parentNode;
-  }
-});
+  });
+}
