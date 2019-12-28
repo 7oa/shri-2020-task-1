@@ -1,0 +1,108 @@
+// Слой темы
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme {
+  --image-placeholder-primary: url("data:image/svg+xml;charset=UTF-8,%3csvg width='80' height='64' viewBox='0 0 80 64' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eplaceholder%3c/title%3e%3cpath d='M32 16h16V8h8v8h8v8h8v8h8v16h-8v-8h-8v8h-8v8h-8v-8H32v8h-8v-8h-8v-8H8v8H0V32h8v-8h8v-8h8V8h8v8zm-8 16h8v-8h-8v8zM16 0h8v8h-8V0zm0 56h8v8h-8v-8zm40-24v-8h-8v8h8zm8-32v8h-8V0h8zm0 56v8h-8v-8h8z' fill='%23000' fill-rule='nonzero'/%3e%3c/svg%3e");
+
+  --image-placeholder-inverse: url("data:image/svg+xml;charset=UTF-8,%3csvg width='80' height='64' viewBox='0 0 80 64' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eplaceholder%3c/title%3e%3cpath d='M32 16h16V8h8v8h8v8h8v8h8v16h-8v-8h-8v8h-8v8h-8v-8H32v8h-8v-8h-8v-8H8v8H0V32h8v-8h8v-8h8V8h8v8zm-8 16h8v-8h-8v8zM16 0h8v8h-8V0zm0 56h8v8h-8v-8zm40-24v-8h-8v8h8zm8-32v8h-8V0h8zm0 56v8h-8v-8h8z' fill='%23FFF' fill-rule='nonzero'/%3e%3c/svg%3e");
+
+  &_color_project-default {
+    --background-default: #ffffff;
+    --background-accent: #ffcc00;
+    --border: #000000;
+
+    --text-main: #000000;
+    --text-secondary: rgba(0, 0, 0, 0.6);
+    --text-additional: rgba(0, 0, 0, 0.3);
+    --text-link: #0077ff;
+
+    --image-bg: var(--image-placeholder-primary);
+  }
+
+  &_color_project-brand {
+    --background-default: #0077ff;
+    --background-accent: #ffffff;
+    --border: #ffffff;
+
+    --text-main: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-additional: rgba(255, 255, 255, 0.3);
+    --text-link: #ffffff;
+
+    --image-bg: var(--image-placeholder-inverse);
+  }
+
+  &_color_project-inverse {
+    --background-default: #000000;
+    --background-accent: #ffffff;
+    --border: #ffffff;
+
+    --text-main: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-additional: rgba(255, 255, 255, 0.3);
+    --text-link: #0077ff;
+
+    --image-bg: var(--image-placeholder-inverse);
+  }
+
+  &_color_project-warning {
+    --background-default: #ff3333;
+    --background-accent: #ffffff;
+    --border: #ff3333;
+
+    --text-main: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-additional: rgba(255, 255, 255, 0.3);
+    --text-link: #fff;
+  }
+
+  &_size_default {
+    --size-s: 8px;
+    --size-m: 10px;
+    --size-l: 11px;
+    --size-xl: 13px;
+    --size-xxl: 16px;
+
+    --lh-s: 21px;
+    --lh-m: 25px;
+    --lh-l: 28px;
+    --lh-xl: 34px;
+    --lh-xxl: 38px;
+  }
+
+  &_space_default {
+    --gap-xxxs: 3px;
+    --gap-xxs: 6px;
+    --gap-xs: 9px;
+    --gap-s: 15px;
+    --gap-m: 18px;
+    --gap-l: 24px;
+    --gap-xl: 27px;
+    --gap-xxl: 36px;
+    --gap-xxxl: 45px;
+    --gap-xxxxl: 51px;
+    --gap-xxxxxl: 72px;
+  }
+
+  --columns-screen-m-12: repeat(12, 1fr);
+  --columns-screen-m-10: repeat(10, 1fr);
+  background: var(--background-default);
+
+  @media screen and (max-width: 1024px) {
+    grid-auto-flow: row;
+    --columns-screen-m-12: unset;
+    --columns-screen-m-10: unset;
+  }
+
+  &_gap_small {
+    --gap: var(--gap-xl);
+    @media screen and (max-width: 1024px) {
+      --gap: var(--gap-s);
+    }
+  }
+}

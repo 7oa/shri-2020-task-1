@@ -1,0 +1,133 @@
+//Контентные блоки
+.payment {
+  border: 3px solid var(--border);
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 335px;
+  height: 100%;
+
+  &__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .placeholder {
+    margin-top: var(--gap-m);
+    margin-bottom: var(--gap-m);
+  }
+}
+
+.product {
+  min-height: 300px;
+  border: 3px solid var(--border);
+
+  &__title {
+    margin-bottom: var(--gap-xxxl);
+  }
+
+  .image {
+    height: 160px;
+    border-color: var(--background-default);
+  }
+}
+
+.e-accordion {
+  cursor: pointer;
+}
+
+.history {
+  border: 3px solid var(--border);
+
+  &__show {
+    margin-top: 0;
+  }
+  &__details {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  &__hide {
+    display: none;
+  }
+}
+
+.cover {
+  min-height: 472px;
+  .image {
+    height: 180px;
+  }
+  &__preview {
+    margin-bottom: var(--gap-l);
+  }
+}
+
+.event {
+  min-height: 400px;
+  &__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--gap-xxl);
+  }
+  &__speaker {
+    margin-right: var(--gap-xs);
+  }
+  &__title {
+    margin-bottom: var(--gap-s);
+  }
+  &__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header {
+  padding: var(--gap-xxxl) var(--gap);
+  &__content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 179px;
+    height: 34px;
+    background-color: var(--text-main);
+  }
+}
+.onoffswitch {
+  width: 97px;
+  height: 32px;
+  border: 2px solid var(--border);
+  padding: 2px;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  &__button {
+    background-color: var(--border);
+    width: 24px;
+    height: 24px;
+  }
+  &_checked {
+    justify-content: flex-end;
+  }
+}
+
+.footer {
+  padding: var(--gap-xxxl) var(--gap);
+  &__content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

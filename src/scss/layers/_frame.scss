@@ -1,0 +1,82 @@
+// Слой каркаса
+
+.layout {
+  &__container {
+    &_align_center {
+      margin: 0 auto;
+    }
+
+    &_size_s {
+      max-width: 920px;
+    }
+    &_size_m {
+      max-width: 1280px;
+    }
+
+    &_space-v_xxxxl {
+      padding-top: var(--gap-xxxxl);
+      padding-bottom: var(--gap-xxxxl);
+    }
+    &_space-v_xxxxxl {
+      padding-top: var(--gap-xxxxxl);
+      padding-bottom: var(--gap-xxxxxl);
+    }
+
+    &_indent-b_xxl {
+      margin-bottom: var(--gap-xxl);
+    }
+    &_indent-b_xxxxl {
+      margin-bottom: var(--gap-xxxxl);
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  &_m-columns_10 {
+    grid-template-columns: var(--columns-screen-m-10);
+  }
+  &_m-columns_12 {
+    grid-template-columns: var(--columns-screen-m-12);
+  }
+
+  &_col-gap_two-thirds {
+    grid-column-gap: calc(var(--gap) * (2 / 3));
+  }
+  &_col-gap_full {
+    grid-column-gap: var(--gap);
+  }
+  &_col-gap_half {
+    grid-column-gap: calc(var(--gap) / 2);
+  }
+
+  &_row-gap_full {
+    grid-row-gap: var(--gap);
+  }
+  &_row-gap_half {
+    grid-row-gap: calc(var(--gap) / 2);
+  }
+
+  &__fraction {
+    &_m-col_2 {
+      grid-column: span 2;
+    }
+
+    &_m-col_3 {
+      grid-column: span 3;
+    }
+
+    &_m-col_4 {
+      grid-column: span 4;
+    }
+
+    &_m-col_5 {
+      grid-column: span 5;
+    }
+
+    &_m-col_8 {
+      grid-column: span 8;
+    }
+  }
+}

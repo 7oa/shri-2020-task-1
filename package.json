@@ -1,0 +1,23 @@
+{
+  "name": "shri-2020-task-1-stub",
+  "version": "1.0.0",
+  "description": "build css&js",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "npm": "^6.0.1"
+  }
+}
