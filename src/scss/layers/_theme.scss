@@ -94,7 +94,6 @@
   background: var(--background-default);
 
   @media screen and (max-width: 1024px) {
-    grid-auto-flow: row;
     --columns-screen-m-12: unset;
     --columns-screen-m-10: unset;
   }
