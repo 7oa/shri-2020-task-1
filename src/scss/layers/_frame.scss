@@ -78,5 +78,9 @@
     &_m-col_8 {
       grid-column: span 8;
     }
+
+    @media screen and (max-width: 1024px) {
+      grid-column: auto;
+    }
   }
 }
