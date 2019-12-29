@@ -13,6 +13,7 @@
     --word-width-l: 100px;
     --word-height: var(--size-s);
     --word-line-height: calc((var(--lh-s) - var(--size-s)) / 2);
+    --line-height-shift: -1px;
   }
   &_size_m {
     --word-width-s: 24px;
@@ -20,6 +21,7 @@
     --word-width-l: 114px;
     --word-height: var(--size-m);
     --word-line-height: calc((var(--lh-m) - var(--size-m)) / 2);
+    --line-height-shift: 0px;
   }
   &_size_l {
     --word-width-s: 28px;
@@ -27,6 +29,7 @@
     --word-width-l: 138px;
     --word-height: var(--size-l);
     --word-line-height: calc((var(--lh-l) - var(--size-l)) / 2);
+    --line-height-shift: 1px;
   }
   &_size_xl {
     --word-width-s: 32px;
@@ -34,6 +37,7 @@
     --word-width-l: 154px;
     --word-height: var(--size-xl);
     --word-line-height: calc((var(--lh-xl) - var(--size-xl)) / 2);
+    --line-height-shift: 2px;
   }
   &_size_xxl {
     --word-width-s: 36px;
@@ -41,6 +45,7 @@
     --word-width-l: 184px;
     --word-height: var(--size-xxl);
     --word-line-height: calc((var(--lh-xxl) - var(--size-xxl)) / 2);
+    --line-height-shift: 3px;
   }
 
   &_type_h1 {
@@ -76,23 +81,20 @@
 .text__word {
   background-color: var(--word-bg);
   flex: 0 0 auto;
+  margin-top: calc(var(--word-line-height) - var(--line-height-shift));
+  margin-bottom: calc(var(--word-line-height) + var(--line-height-shift));
+
   &_width_s {
     width: var(--word-width-s);
     height: var(--word-height);
-    margin-top: var(--word-line-height);
-    margin-bottom: var(--word-line-height);
   }
   &_width_m {
     width: var(--word-width-m);
     height: var(--word-height);
-    margin-top: var(--word-line-height);
-    margin-bottom: var(--word-line-height);
   }
   &_width_l {
     width: var(--word-width-l);
     height: var(--word-height);
-    margin-top: var(--word-line-height);
-    margin-bottom: var(--word-line-height);
   }
 }
 
