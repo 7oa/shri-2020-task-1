@@ -9,7 +9,7 @@
 
 Правила дизайн-системы описаны в терминах методологии [БЭМ](https://ru.bem.info/methodology/key-concepts). Для обозначения сущностей интерфейса используется [соглашение по именованию](https://ru.bem.info/methodology/naming-convention).
 
-[Реализованная страница index](https://7oa.github.io/shri-2020-task-1/build/index)
+[Реализованная страница index](https://7oa.github.io/shri-2020-task-1/build/index)<br>
 [Реализованная страница product](https://7oa.github.io/shri-2020-task-1/build/product)
 
 `src` - исходники css, js.
