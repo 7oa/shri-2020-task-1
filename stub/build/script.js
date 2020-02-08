@@ -1,1 +1,48 @@
-"use strict";function toggleClickAccordion(e){var o=e.querySelector(".e-accordion__more"),t=o.ownerDocument.defaultView.getComputedStyle(o,null).display;o.style.display="none"===t?"block":"none"}function onoffSwitch(e){e.classList.toggle("onoffswitch_checked");var o=document.querySelectorAll(".theme_color_project-default"),t=document.querySelectorAll(".theme_color_project-inverse");o.forEach(function(e){e.classList.add("theme_color_project-inverse"),e.classList.remove("theme_color_project-default")}),t.forEach(function(e){e.classList.add("theme_color_project-default"),e.classList.remove("theme_color_project-inverse")})}document.body.addEventListener("click",function(e){for(var o=e.target;o!==this;){if(o.classList.contains("e-accordion"))return void toggleClickAccordion(o);if(o.classList.contains("onoffswitch"))return void onoffSwitch(o);o=o.parentNode}});
+(function() {
+  function toggleClickAccordion(target) {
+    const accordionMore = target.querySelector(".e-accordion__more");
+    const win = accordionMore.ownerDocument.defaultView;
+    const accordionMoreDisplay = win.getComputedStyle(accordionMore, null)
+      .display;
+    if (accordionMoreDisplay === "none") accordionMore.style.display = "block";
+    else accordionMore.style.display = "none";
+  }
+
+  function onoffSwitch(target) {
+    target.classList.toggle("onoffswitch_checked");
+    const themeDefault = document.querySelectorAll(
+      ".theme_color_project-default"
+    );
+    const themeInverse = document.querySelectorAll(
+      ".theme_color_project-inverse"
+    );
+
+    themeDefault.forEach(item => {
+      item.classList.add("theme_color_project-inverse");
+      item.classList.remove("theme_color_project-default");
+    });
+
+    themeInverse.forEach(item => {
+      item.classList.add("theme_color_project-default");
+      item.classList.remove("theme_color_project-inverse");
+    });
+  }
+
+  if (document.body) {
+    document.body.addEventListener("click", function(event) {
+      let target = event.target;
+
+      while (target !== this) {
+        if (target.classList.contains("e-accordion")) {
+          toggleClickAccordion(target);
+          return;
+        }
+        if (target.classList.contains("onoffswitch")) {
+          onoffSwitch(target);
+          return;
+        }
+        target = target.parentNode;
+      }
+    });
+  }
+})();
